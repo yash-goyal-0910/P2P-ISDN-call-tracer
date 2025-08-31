@@ -1,16 +1,16 @@
-# **WhatsApp IP Tracker Tool**
+# **P2P ISDN Call Tracker Tool**
 
-This project is an **educational tool** designed to help cybersecurity enthusiasts understand how **peer-to-peer (P2P) communication** works during WhatsApp voice or video calls. It demonstrates how public IP addresses can be exposed when P2P connections are used.  
+This project is an **educational tool** designed to help cybersecurity enthusiasts understand how **peer-to-peer (P2P) communication** works during ISDN voice or video calls. It demonstrates how public IP addresses can be exposed when P2P connections are used.  
 
-When making WhatsApp voice or video calls, the app typically prioritizes direct **peer-to-peer (P2P)** communication to minimize latency and improve call quality. By avoiding relay servers, both devices exchange their **public IP addresses** directly. However, this mechanism could lead to **IP address exposure**, which, in malicious hands, could be used for reconnaissance or other attacks.
+When making ISDN voice or video calls, the app typically prioritizes direct **peer-to-peer (P2P)** communication to minimize latency and improve call quality. By avoiding relay servers, both devices exchange their **public IP addresses** directly. However, this mechanism could lead to **IP address exposure**, which, in malicious hands, could be used for reconnaissance or other attacks.
 
-This project aims to capture network traffic on a local network, filter out packets related to WhatsApp calls, and extract the public IP addresses of the devices participating in the call.
+This project aims to capture network traffic on a local network, filter out packets related to ISDN calls, and extract the public IP addresses of the devices participating in the call.
 
 ---
 
 ## **🌟 Motivation**
 
-- **Understanding WhatsApp P2P Calling**: WhatsApp's calling feature avoids using a relay server to reduce latency, relying on P2P communication. This means the two participating devices must share their **public IP addresses**.
+- **Understanding ISDN P2P Calling**: ISDN's calling feature avoids using a relay server to reduce latency, relying on P2P communication. This means the two participating devices must share their **public IP addresses**.
 - **IP Exposure Risks**: While P2P improves performance, exposing public IPs can lead to potential security risks:
   - **Reconnaissance**: Malicious actors can use the IP to locate users geographically or identify their ISPs.
   - **Denial-of-Service (DoS) Attacks**: IP addresses can be targeted in DoS or DDoS attacks.
@@ -20,8 +20,8 @@ This project aims to capture network traffic on a local network, filter out pack
 
 ## **⚙️ Features**
 
-- **Real-time Packet Sniffing**: Captures live network traffic to analyze packets exchanged during WhatsApp calls.
-- **WhatsApp Traffic Filtering**: Filters packets related to WhatsApp based on known IP ranges and ports.
+- **Real-time Packet Sniffing**: Captures live network traffic to analyze packets exchanged during ISDN calls.
+- **ISDN Traffic Filtering**: Filters packets related to ISDN based on known IP ranges and ports.
 - **Network Interface Detection**: Allows users to view and select the network interface for sniffing.
 - **Geolocation of IPs**: Retrieves geographical location data (country, city, latitude, and longitude) for captured IPs.
 - **Report Generation**:
@@ -43,9 +43,9 @@ This project aims to capture network traffic on a local network, filter out pack
    The user selects the desired interface (e.g., `Wi-Fi`).
 
 2. **Packet Sniffing**:  
-   The tool begins sniffing network packets on the selected interface and filters traffic related to WhatsApp. WhatsApp packets are identified based on:
-   - **IP Ranges**: Known WhatsApp IP ranges (e.g., `31.13.64.0/18`, `157.240.0.0/16`).
-   - **Ports**: WhatsApp typically uses UDP with dynamic ports in the range `49152-65535`.
+   The tool begins sniffing network packets on the selected interface and filters traffic related to ISDN. ISDN packets are identified based on:
+   - **IP Ranges**: Known ISDN IP ranges (e.g., `31.13.64.0/18`, `157.240.0.0/16`).
+   - **Ports**: ISDN typically uses UDP with dynamic ports in the range `49152-65535`.
 
 3. **IP Address Extraction**:  
    The tool extracts the source and destination IPs from the captured packets.
@@ -67,8 +67,8 @@ Follow these steps to set up and run the project on your system:
 
 ### **1. Clone the Repository**
 ```bash
-git clone https://github.com/arshadakl/Whatsapp-P2P-Traceroute.git
-cd Whatsapp-P2P-Traceroute
+git clone https://github.com/yash-goyal-0910/P2P-ISDN-call-tracer
+cd P2P-ISDN-Call-Traceroute
 ```
 
 ### **2. Install Dependencies**
@@ -108,7 +108,7 @@ pip install -r requirements.txt
    Enter the number of the interface you want to use: 1
    ```
 
-5. The tool will start sniffing packets on the selected interface. Captured WhatsApp packets will be displayed in real-time, along with extracted IP addresses and geolocation data.
+5. The tool will start sniffing packets on the selected interface. Captured ISDN packets will be displayed in real-time, along with extracted IP addresses and geolocation data.
 
 ---
 
@@ -126,8 +126,8 @@ Enter the number of the interface you want to use: 1
 [+] You selected: Wi-Fi
 
 [*] Starting packet sniffing...
-[+] Captured WhatsApp Packet: 192.168.1.101 -> 157.240.12.34
-[+] Captured WhatsApp Packet: 192.168.1.102 -> 31.13.64.12
+[+] Captured ISDN Packet: 192.168.1.101 -> 157.240.12.34
+[+] Captured ISDN Packet: 192.168.1.102 -> 31.13.64.12
 [+] IP: 157.240.12.34 - Menlo Park, United States (37.453, -122.181)
 [+] IP: 31.13.64.12 - Dublin, Ireland (53.333, -6.248)
 ```
@@ -164,5 +164,11 @@ ip,country,city,latitude,longitude
 ### **⚠️ Legal Disclaimer**
 
 This tool is intended for **educational purposes only**. Unauthorized network sniffing or monitoring may violate privacy laws or terms of service agreements. Always ensure you have proper authorization before using this tool in any real-world environment. The authors are not responsible for misuse of this tool.
+
+---
+
+### **Reference-**
+
+https://github.com/arshadakl/Whatsapp-P2P-Traceroute
 
 ---
