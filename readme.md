@@ -118,37 +118,38 @@ pip install -r requirements.txt
 
 ```plaintext
 Available network interfaces:
-  [0] Ethernet
-  [1] Wi-Fi
-  [2] Loopback Pseudo-Interface 1
+[0] Ethernet
+[1] Wi-Fi
+[2] Loopback Pseudo-Interface 1
 
 Enter the number of the interface you want to use: 1
 [+] You selected: Wi-Fi
 
 [*] Starting packet sniffing...
-[+] Captured ISDN Packet: 192.168.1.101 -> 157.240.12.34
-[+] Captured ISDN Packet: 192.168.1.102 -> 31.13.64.12
-[+] IP: 157.240.12.34 - Menlo Park, United States (37.453, -122.181)
-[+] IP: 31.13.64.12 - Dublin, Ireland (53.333, -6.248)
+[+] Captured ISDN Packet: 103.21.58.147 -> 182.74.200.67
+[+] Captured ISDN Packet: 106.51.75.92 -> 59.144.23.158
+[+] IP: 182.74.200.67 - Mumbai, India (19.0760, 72.8777)
+[+] IP: 59.144.23.158 - Bhopal, India (23.2599, 77.4126)
+
 ```
 
 ### **JSON Report**
 ```json
 [
-    {
-        "ip": "157.240.12.34",
-        "country": "United States",
-        "city": "Menlo Park",
-        "latitude": 37.453,
-        "longitude": -122.181
-    },
-    {
-        "ip": "31.13.64.12",
-        "country": "Ireland",
-        "city": "Dublin",
-        "latitude": 53.333,
-        "longitude": -6.248
-    }
+  {
+    "ip": "103.21.58.147",
+    "country": "India",
+    "city": "Mumbai",
+    "latitude": 19.0760,
+    "longitude": 72.8777
+  },
+  {
+    "ip": "59.144.23.158", 
+    "country": "India",
+    "city": "Bhopal",
+    "latitude": 23.2599,
+    "longitude": 77.4126
+  }
 ]
 ```
 
@@ -171,4 +172,4 @@ This tool is intended for **educational purposes only**. Unauthorized network sn
 
 https://github.com/arshadakl/Whatsapp-P2P-Traceroute
 
----
+---Upgrade
