@@ -156,8 +156,8 @@ Enter the number of the interface you want to use: 1
 ### **CSV Report**
 ```csv
 ip,country,city,latitude,longitude
-157.240.12.34,United States,Menlo Park,37.453,-122.181
-31.13.64.12,Ireland,Dublin,53.333,-6.248
+103.21.58.147,India,Mumbai,19.0760,72.8777
+59.144.23.158,India,Bhopal,23.2599,77.4126
 ```
 
 ---
